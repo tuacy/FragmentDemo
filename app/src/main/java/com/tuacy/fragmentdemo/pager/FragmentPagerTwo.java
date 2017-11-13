@@ -1,4 +1,4 @@
-package com.tuacy.fragmentdemo.statics;
+package com.tuacy.fragmentdemo.pager;
 
 
 import android.app.Fragment;
@@ -13,9 +13,13 @@ import android.view.ViewGroup;
 
 import com.tuacy.fragmentdemo.R;
 
-public class StaticTwoFragment extends Fragment {
+public class FragmentPagerTwo extends Fragment {
 
-	private static final String TAG = "tuacy";
+	public static FragmentPagerTwo instance() {
+		return new FragmentPagerTwo();
+	}
+
+	private static final String TAG = "vae";
 
 	@Override
 	public void onInflate(Context context, AttributeSet attrs, Bundle savedInstanceState) {
@@ -39,7 +43,7 @@ public class StaticTwoFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 		Log.d(TAG, "two onCreateView");
-		return inflater.inflate(R.layout.fragment_staitc_two, container, false);
+		return inflater.inflate(R.layout.fragment_pager_two, container, false);
 	}
 
 	@Override
