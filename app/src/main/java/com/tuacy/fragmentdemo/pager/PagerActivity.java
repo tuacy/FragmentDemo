@@ -1,7 +1,7 @@
 package com.tuacy.fragmentdemo.pager;
 
-import android.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.Button;
@@ -88,7 +88,7 @@ public class PagerActivity extends BaseAppActivity {
 	}
 
 	private void initData() {
-		mPagerFragment.setAdapter(new TabFragmentAdapter(getFragmentManager(), obtainFragments()));
+		mPagerFragment.setAdapter(new TabFragmentAdapter(getSupportFragmentManager(), obtainFragments()));
 		mPagerFragment.setCurrentItem(0);
 	}
 

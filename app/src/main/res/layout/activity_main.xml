@@ -23,6 +23,18 @@
         android:layout_height="wrap_content"
         android:text="Fragment + Pager"/>
 
+    <Button
+        android:id="@+id/button_shared_element"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Shared Element"/>
+
+    <Button
+        android:id="@+id/button_crumb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="面包屑"/>
+
 
 
 </LinearLayout>

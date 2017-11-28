@@ -23,6 +23,10 @@
 
         <activity android:name=".pager.PagerActivity" />
 
+        <activity android:name=".sharedelment.SharedElementActivity" />
+
+        <activity android:name=".crumb.CrumbActivity" />
+
     </application>
 
 </manifest>

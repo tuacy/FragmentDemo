@@ -1,11 +1,9 @@
 package com.tuacy.fragmentdemo.pager;
 
-
-import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.util.AttributeSet;
+import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,13 +17,7 @@ public class FragmentPagerThree extends Fragment {
 		return new FragmentPagerThree();
 	}
 
-	private static final String TAG = "tuacy";
-
-	@Override
-	public void onInflate(Context context, AttributeSet attrs, Bundle savedInstanceState) {
-		super.onInflate(context, attrs, savedInstanceState);
-		Log.d(TAG, "three onInflate");
-	}
+	private static final String TAG = "vae";
 
 	@Override
 	public void onAttach(Context context) {
@@ -92,5 +84,17 @@ public class FragmentPagerThree extends Fragment {
 	public void onDetach() {
 		super.onDetach();
 		Log.d(TAG, "three onDetach");
+	}
+
+	@Override
+	public void setUserVisibleHint(boolean isVisibleToUser) {
+		super.setUserVisibleHint(isVisibleToUser);
+		Log.d(TAG, "three visible = " + isVisibleToUser);
+	}
+
+	@Override
+	public void onHiddenChanged(boolean hidden) {
+		super.onHiddenChanged(hidden);
+		Log.d(TAG, "three hidden = " + hidden);
 	}
 }
