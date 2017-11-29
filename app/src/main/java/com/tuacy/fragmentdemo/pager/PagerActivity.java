@@ -88,6 +88,7 @@ public class PagerActivity extends BaseAppActivity {
 	}
 
 	private void initData() {
+		mPagerFragment.setOffscreenPageLimit(3);
 		mPagerFragment.setAdapter(new TabFragmentAdapter(getSupportFragmentManager(), obtainFragments()));
 		mPagerFragment.setCurrentItem(0);
 	}
