@@ -1,11 +1,7 @@
 package com.tuacy.fragmentdemo.pager;
 
-
-import android.app.Fragment;
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.util.AttributeSet;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,84 +9,41 @@ import android.view.ViewGroup;
 
 import com.tuacy.fragmentdemo.R;
 
-public class FragmentPagerThree extends Fragment {
+public class FragmentPagerThree extends LazyFragment {
 
 	public static FragmentPagerThree instance() {
 		return new FragmentPagerThree();
 	}
 
-	private static final String TAG = "tuacy";
+	private static final String TAG = "vae";
 
-	@Override
-	public void onInflate(Context context, AttributeSet attrs, Bundle savedInstanceState) {
-		super.onInflate(context, attrs, savedInstanceState);
-		Log.d(TAG, "three onInflate");
-	}
-
-	@Override
-	public void onAttach(Context context) {
-		super.onAttach(context);
-		Log.d(TAG, "three onAttach");
-	}
-
-	@Override
-	public void onCreate(@Nullable Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		Log.d(TAG, "three onCreate");
-	}
 
 	@Nullable
 	@Override
 	public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-		Log.d(TAG, "three onCreateView");
 		return inflater.inflate(R.layout.fragment_pager_three, container, false);
 	}
 
 	@Override
-	public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-		Log.d(TAG, "three onActivityCreated");
-		super.onActivityCreated(savedInstanceState);
+	protected void onFirstUserVisible() {
+		Log.d(TAG, "three onFirstUserVisible");
 	}
 
 	@Override
-	public void onStart() {
-		super.onStart();
-		Log.d(TAG, "three onStart");
+	protected void onFirstUserInvisible() {
+		super.onFirstUserInvisible();
+		Log.d(TAG, "three onFirstUserInvisible");
 	}
 
 	@Override
-	public void onResume() {
-		super.onResume();
-		Log.d(TAG, "three onResume");
+	protected void onUserVisible() {
+		super.onUserVisible();
+		Log.d(TAG, "three onUserVisible");
 	}
 
 	@Override
-	public void onPause() {
-		super.onPause();
-		Log.d(TAG, "three onPause");
-	}
-
-	@Override
-	public void onStop() {
-		super.onStop();
-		Log.d(TAG, "three onStop");
-	}
-
-	@Override
-	public void onDestroyView() {
-		super.onDestroyView();
-		Log.d(TAG, "three onDestroyView");
-	}
-
-	@Override
-	public void onDestroy() {
-		super.onDestroy();
-		Log.d(TAG, "three onDestroy");
-	}
-
-	@Override
-	public void onDetach() {
-		super.onDetach();
-		Log.d(TAG, "three onDetach");
+	protected void onUserInvisible() {
+		super.onUserInvisible();
+		Log.d(TAG, "three onUserInvisible");
 	}
 }
