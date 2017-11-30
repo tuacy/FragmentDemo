@@ -12,7 +12,7 @@ import java.util.List;
 public abstract class TestView {
 
 	/**
-	 * 开启一些列对Fragment的编辑操作（开启一个事务，用于对Fragment操作的一系列处理）
+	 * 开启一个事务，用于对Fragment操作的一系列处理
 	 */
 	public abstract FragmentTransaction beginTransaction();
 

@@ -1,1 +1,1 @@
-include ':app', ':sharedelement', ':example'
+include ':app', ':sharedelement', ':example', ':gallery'
