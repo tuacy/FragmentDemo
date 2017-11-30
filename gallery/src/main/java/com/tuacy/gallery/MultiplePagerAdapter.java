@@ -56,6 +56,7 @@ public class MultiplePagerAdapter extends PagerAdapter {
 	@Override
 	public Object instantiateItem(ViewGroup container, int position) {
 		View view = layoutInflater.inflate(R.layout.item_gallery, container, false);
+		view.setTag(position);
 		((TextView) view.findViewById(R.id.title)).setText("位置 = " + (position % 5));
 		container.addView(view);
 		mViews.put(position, view);

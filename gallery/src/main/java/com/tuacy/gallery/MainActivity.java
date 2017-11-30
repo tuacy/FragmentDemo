@@ -9,7 +9,8 @@ import com.tuacy.gallery.transformer.ScaleInTransformer;
 
 public class MainActivity extends AppCompatActivity {
 
-	private ViewPager            mViewPager;
+	private ViewPagerWrap            mViewPagerWrap;
+	private ViewPager mViewPager;
 	private MultiplePagerAdapter mAdapter;
 
 	@Override
@@ -22,8 +23,10 @@ public class MainActivity extends AppCompatActivity {
 	}
 
 	private void initView() {
-		mViewPager = findViewById(R.id.viewPager);
+		mViewPagerWrap = findViewById(R.id.viewPager);
+		mViewPager = mViewPagerWrap.getViewPager();
 		mViewPager.setPageMargin(20);
+		mViewPager.setOffscreenPageLimit(6);
 	}
 
 	private void initEvent() {
@@ -31,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 	}
 
 	private void initData() {
-		mViewPager.setOffscreenPageLimit(6);
+
 		mViewPager.setPageTransformer(true, new ScaleInTransformer());
 		mAdapter = new MultiplePagerAdapter(this);
 		mViewPager.setAdapter(mAdapter);

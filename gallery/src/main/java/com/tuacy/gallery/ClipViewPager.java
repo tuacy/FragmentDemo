@@ -1,6 +1,5 @@
 package com.tuacy.gallery;
 
-
 import android.content.Context;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
@@ -23,9 +22,9 @@ public class ClipViewPager extends ViewPager {
 		if (ev.getAction() == MotionEvent.ACTION_UP) {
 			View view = viewOfClickOnScreen(ev);
 			if (view != null) {
-				int index = indexOfChild(view);
-				if (getCurrentItem() != index) {
-					setCurrentItem(indexOfChild(view));
+				int position = (int) view.getTag();
+				if (getCurrentItem() != position) {
+					setCurrentItem(position);
 				}
 			}
 		}
