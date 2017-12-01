@@ -8,6 +8,9 @@ import com.tuacy.example.argument.ArgumentActivity;
 import com.tuacy.example.backstack.BackStackActivity;
 import com.tuacy.example.base.activity.BaseAppActivity;
 import com.tuacy.example.baseuse.BaseUseActivity;
+import com.tuacy.example.pager.PagerActivity;
+import com.tuacy.example.sharedelment.SharedElementActivity;
+import com.tuacy.example.statics.StaticFragmentActivity;
 
 public class MainActivity extends BaseAppActivity {
 
@@ -20,6 +23,13 @@ public class MainActivity extends BaseAppActivity {
 
 	private void initView() {
 
+		findViewById(R.id.button_static_use).setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				mContext.startActivity(new Intent(mContext, StaticFragmentActivity.class));
+			}
+		});
+
 		findViewById(R.id.button_base_use).setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -27,6 +37,12 @@ public class MainActivity extends BaseAppActivity {
 			}
 		});
 
+		findViewById(R.id.button_pager).setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				mContext.startActivity(new Intent(mContext, PagerActivity.class));
+			}
+		});
 		findViewById(R.id.button_back_stack).setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -38,6 +54,13 @@ public class MainActivity extends BaseAppActivity {
 			@Override
 			public void onClick(View v) {
 				mContext.startActivity(new Intent(mContext, ArgumentActivity.class));
+			}
+		});
+
+		findViewById(R.id.button_shared_element).setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				mContext.startActivity(new Intent(mContext, SharedElementActivity.class));
 			}
 		});
 

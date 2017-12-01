@@ -26,6 +26,16 @@
 
         <activity android:name=".argument.ArgumentActivity"
             android:label="Fragment Argument使用"/>
+
+        <activity android:name=".statics.StaticFragmentActivity"
+            android:label="静态Fragment使用"/>
+
+        <activity android:name=".pager.PagerActivity"
+            android:label="Pager + Fragment使用"/>
+
+        <activity android:name=".sharedelment.SharedElementActivity"
+            android:label="Shared Element共享元素的使用"/>
+
     </application>
 
 </manifest>

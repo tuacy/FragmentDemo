@@ -6,11 +6,27 @@
     android:orientation="vertical">
 
     <Button
+        android:id="@+id/button_static_use"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="静态Fragment使用"
+        android:textAllCaps="false" />
+
+    <Button
         android:id="@+id/button_base_use"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Fragment基本使用"
+        android:text="动态Fragment使用"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/button_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="ViewPager + Fragment使用"
         android:textAllCaps="false"/>
 
     <Button
@@ -27,6 +43,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Fragment参数传递"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/button_shared_element"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Shared Element共享元素的使用"
         android:textAllCaps="false"/>
 
 </LinearLayout>
